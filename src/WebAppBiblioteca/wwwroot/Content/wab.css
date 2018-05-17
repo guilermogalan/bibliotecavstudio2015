@@ -1,0 +1,41 @@
+﻿body {
+    padding-top: 70px;
+}
+.slide-image {
+    width: 100%;
+}
+
+.caurousel-holder {
+    margin-bottom: 30px;
+}
+
+.caurousel-control {
+    border-radius: 4px;
+}
+
+.caption h4 {
+    white-space: nowrap;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+.ratings {
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #d17581;
+}
+
+.thumbnail {
+    padding: 0;
+}
+    
+.thumbnail .caption-full {
+    padding: 9px;
+    color: #333;
+}
+
+footer {
+    margin: 50px 0;
+}
