@@ -17,15 +17,8 @@ namespace WebAppBiblioteca.models
 
         }//fin del constructor
 
-        public IEnumerable<CatLibros> CategoriaLibros
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-
         //extension de los metodos disponibles en la clase interface
-        public IEnumerable<CatLibros> CategoriasProductos => _appDbContext.CategoriasLibros;
+        public IEnumerable<CatLibros> CategoriaLibros => _appDbContext.CategoriasLibros;
     }
 }
+

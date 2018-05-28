@@ -8,7 +8,8 @@ namespace WebAppBiblioteca.models
     public interface ILibrosRepositorio
     {
         IEnumerable<Libros> Libros { get; }
-        IEnumerable<Libros> LibroOferta { get; }
+        IEnumerable<Libros> LibroDestacadosLectores { get; }
+
         Libros GetLibrosPorCodigo(int CodigoLibro);
 
     }

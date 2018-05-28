@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-
 namespace WebAppBiblioteca.models
 {
     public class AppDbContext: DbContext
@@ -13,7 +12,6 @@ namespace WebAppBiblioteca.models
         }//fin del constructor
 
         public DbSet<CatLibros> CategoriasLibros { get; set; }
-
         public DbSet<Libros> Libros { get; set; }
         
     }

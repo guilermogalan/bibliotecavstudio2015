@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using WebAppBiblioteca.models;
 using WebAppBiblioteca.viewmodels;
 
-
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace WebAppBiblioteca.controllers
@@ -25,19 +24,17 @@ namespace WebAppBiblioteca.controllers
         }//fin del constructor
 
         //metodo para devolver la vista con datos inyectados
-
-        public ViewResult ListaLibros(string categoriasProductos)
+        public ViewResult ListaLibros()
         {
-            //objetos para mostrar las categorias de los productos
+            //objetos para mostrar las categorias de los libros
             ListaLibrosViewModel listalibrosViewModel = new ListaLibrosViewModel();
-            listalibrosViewModel.Libros = _librosRepositorio.Libros.Where(c => c.EstadoLibro == 0);
+            listalibrosViewModel.Libros = _librosRepositorio.Libros;
+            //pasando intencionalmente un valor a la variable de la clase
+            //listalibrosViewModel.CategoriasLibros = ;
 
-            //pasando intencionalmente un valor a la variedad de la clase
-            listalibrosViewModel.CategoriasLibros = "Libros Realista";
-
+            //return View(_librosRepositorio.Libros);
             return View(listalibrosViewModel);
-        }//fin del metodo lista libros
-
+        }//fin del metodo Listalibros
 
     }
 }

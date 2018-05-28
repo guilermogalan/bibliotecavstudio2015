@@ -1,35 +1,17 @@
 ﻿@model ListaLibrosViewModel
-<h1>@Model.CategoriasLibros</h1>
-@*foreach (var libros in Model)*@
-<div class="col-sm-4 col-lg-4 col-md-4">
-</div>
-<table border="1">
-    <thead>
-        <tr>
-            <th>codigo</th>
-            <th>nombre libro</th>
-            <th>descripcion</th>
-            <th>idcategoria</th>
-            <th>autor</th>
-            <th>editorial</th>
-            <th>estado</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var libros in Model.Libros)
-            {
-            <tr>
-                <td>@libros.CodigoLibro</td>
-                <td>@libros.NombreLibro</td>
-                <td>@libros.DescripLibro</td>
-                <td>@libros.CodigoCategoria</td>
-                <td>@libros.AutorLibro</td>
-                <td>@libros.EditorialLibro</td>
-                <td>@libros.EstadoLibro</td>
-            </tr>
-        }
-    </tbody>
-</table>
 
-
-
+@foreach (var libros in Model.Libros)
+{
+    <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card">
+            <img class="card-img-top" src="@libros.ImagenURL" alt="">
+            <div class="card-body">
+                <h4 class="card-title">@libros.NombreLibro</h4>
+                <p class="card-text">@libros.PreCostoLibro.ToString("c")</p>
+            </div>
+            <div class="card-footer">
+                <a href="#" class="btn btn-primary">Detalles</a>
+            </div>
+        </div>
+    </div>
+}

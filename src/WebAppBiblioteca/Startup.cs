@@ -11,7 +11,6 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration; //extension que se utiliza con IConfigurationRoot
 using Microsoft.EntityFrameworkCore; //extension para conexion con SQLServer
 
-
 namespace WebAppBiblioteca
 {
     public class Startup
@@ -39,10 +38,11 @@ namespace WebAppBiblioteca
             //actualizado por implementacion EFCore
             //services.AddTransient<ICatLibrosRepositorio, MockCatLibrosRepositorio>();
             services.AddTransient<ICatLibrosRepositorio, CatLibrosRepositorio>();
-            services.AddTransient<ILibrosRepositorio, MockLibrosRepositorio>();
+            services.AddTransient<ILibrosRepositorio, LibrosRepositorio>();
             
             //agrega soporte MVC a mi proyecto
             services.AddMvc();
+          
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,7 +53,6 @@ namespace WebAppBiblioteca
             app.UseMvcWithDefaultRoute();
             app.UseDeveloperExceptionPage();
             DataInicio.AgregarData(app);
-
         }
     }
 }
