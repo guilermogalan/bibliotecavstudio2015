@@ -11,7 +11,7 @@ namespace WebAppBiblioteca.models
         {
         }//fin del constructor
 
-        public DbSet<CatLibros> CategoriasLibros { get; set; }
+        public DbSet<CatLibros> CategoriaLibros { get; set; }
         public DbSet<Libros> Libros { get; set; }
         
     }

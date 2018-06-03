@@ -14,9 +14,9 @@ namespace WebAppBiblioteca.models
             {
                 return new List<CatLibros>
                 {
-                    new CatLibros {CodigoCatLibro = 1, NombreCatLibro = "Realista"},
-                    new CatLibros {CodigoCatLibro = 2, NombreCatLibro = "Fantasia" },
-                    new CatLibros {CodigoCatLibro = 3, NombreCatLibro = "Basado en hechos reales" }
+                    new CatLibros {CodigoCatLibro = 1, NombreCatLibro = "Realista", DescripcionCatLibro = "basado en la historia de emilio raz"},
+                    new CatLibros {CodigoCatLibro = 2, NombreCatLibro = "Fantasia", DescripcionCatLibro = "libro escrito por margareth null" },
+                    new CatLibros {CodigoCatLibro = 3, NombreCatLibro = "Basado en hechos reales", DescripcionCatLibro = "de la historia de la juventud de 21" }
                 };
             }//FIN DEL GET
         }//fin del IEnumerable

@@ -21,11 +21,13 @@ namespace WebAppBiblioteca.Migrations
                     b.Property<int>("CodigoCatLibro")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<string>("DescripcionCatLibro");
+
                     b.Property<string>("NombreCatLibro");
 
                     b.HasKey("CodigoCatLibro");
 
-                    b.ToTable("CategoriasLibros");
+                    b.ToTable("CategoriaLibros");
                 });
 
             modelBuilder.Entity("WebAppBiblioteca.models.Libros", b =>

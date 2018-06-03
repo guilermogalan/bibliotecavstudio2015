@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
@@ -12,7 +11,7 @@ namespace WebAppBiblioteca.models
         [Key]
         public int CodigoCatLibro { get; set; }
         public string NombreCatLibro { get; set; }
-       
+        public string DescripcionCatLibro { get; set; }
         public List<Libros> Libros { get; set; }
 
     }

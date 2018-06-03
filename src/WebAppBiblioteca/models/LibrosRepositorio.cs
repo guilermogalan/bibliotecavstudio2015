@@ -27,13 +27,13 @@ namespace WebAppBiblioteca.models
         {
             get
             {
-                return _appDbContext.Libros.Include(c => c.CatLibros).Where(p => p.LibroDestacado);
+                return _appDbContext.Libros.Include(c => c.CatLibros).Where(l => l.LibroDestacado);
             }
         }
 
         public Libros GetLibrosPorCodigo(int CodigoLibro)
         {
-            return _appDbContext.Libros.FirstOrDefault(p => p.CodigoLibro == CodigoLibro);
+            return _appDbContext.Libros.FirstOrDefault(l => l.CodigoLibro == CodigoLibro);
         }
     }
 }

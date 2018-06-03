@@ -10,6 +10,6 @@ namespace WebAppBiblioteca.viewmodels
     {
 
         public IEnumerable<Libros> Libros { get; set; }
-        public string CategoriasLibros { get; set; }
+        public string CategoriaLibros { get; set; }
     }
 }

@@ -14,18 +14,21 @@ namespace WebAppBiblioteca.models
         {
             AppDbContext contexto = ab.ApplicationServices.GetRequiredService<AppDbContext>();
 
-            if (!contexto.CategoriasLibros.Any())
+            if (!contexto.CategoriaLibros.Any())
             {
                 //Categorias Libros Iniciales es una coleccion local
-                contexto.CategoriasLibros.AddRange(CategoriasLibrosIniciales.Select(c => c.Value));
+                contexto.CategoriaLibros.AddRange(CategoriasLibrosIniciales.Select(c => c.Value));
             }
             if (!contexto.Libros.Any())
             {
                 contexto.AddRange
                 (
-                    new Libros {NombreLibro = "Cien caminos", DescripCortaLibro = "Obra Clasica", DescripLargaLibro = "Obra escrita en el año 1972 por un grande", PreCostoLibro = 20.0M, PreVentaLibro = 20.0M, ImagenURL = "/Imagenes/Portadas.jpg", ImagenPreviaURL = "/Imagenes/Portadas.jpg", LibroDestacado = true, LibroEnExistencia = true, EstadoLibro = true, CatLibros = CategoriasLibrosIniciales["Obras Clasicas"] },
-                    new Libros {NombreLibro = "Cien años", DescripCortaLibro = "Obra Clasica", DescripLargaLibro = "Obra escrita en el año 1969", PreCostoLibro = 20.0M, PreVentaLibro = 20.0M, ImagenURL = "/Imagenes/logolibro.jpg", ImagenPreviaURL = "/Imagenes/logolibro.jpg", LibroDestacado = true, LibroEnExistencia = true, EstadoLibro = true, CatLibros = CategoriasLibrosIniciales["Novelas Clasicas"] }
-                    );
+                    new Libros { NombreLibro = "Cien caminos", DescripCortaLibro = "Obra Clasica", DescripLargaLibro = "Obra escrita en el año 1972 por un grande", PreCostoLibro = 20.0M, PreVentaLibro = 20.0M, ImagenURL = "/imagenes/libros/Portada.jpg", ImagenPreviaURL = "/imagenes/libros/Portada.jpg", LibroDestacado = true, LibroEnExistencia = true, EstadoLibro = true, CatLibros = CategoriasLibrosIniciales["Realista"] },
+                    new Libros { NombreLibro = "Cien años", DescripCortaLibro = "Obra Clasica", DescripLargaLibro = "Obra escrita en el año 1969", PreCostoLibro = 20.0M, PreVentaLibro = 20.0M, ImagenURL = "/imagenes/libros/años.jpg", ImagenPreviaURL = "/imagenes/libros/años.jpg", LibroDestacado = true, LibroEnExistencia = true, EstadoLibro = true, CatLibros = CategoriasLibrosIniciales["Fantasia"] },
+                    new Libros { NombreLibro = "Dracula", DescripCortaLibro = "Obra Clasica", DescripLargaLibro = "Obra escrita en el año 1969", PreCostoLibro = 20.0M, PreVentaLibro = 20.0M, ImagenURL = "/imagenes/libros/dracula.jpg", ImagenPreviaURL = "/imagenes/libros/dracula.jpg", LibroDestacado = true, LibroEnExistencia = true, EstadoLibro = true, CatLibros = CategoriasLibrosIniciales["Basado en hechos reales"] },
+                    new Libros { NombreLibro = "años", DescripCortaLibro = "Obra Clasica", DescripLargaLibro = "Obra escrita en el año 1969", PreCostoLibro = 20.0M, PreVentaLibro = 20.0M, ImagenURL = "/imagenes/libros/cien.jpg", ImagenPreviaURL = "/imagenes/libros/cien.jpg", LibroDestacado = true, LibroEnExistencia = true, EstadoLibro = true, CatLibros = CategoriasLibrosIniciales["Basado en hechos reales"] }
+                    
+              );
             }
 
             contexto.SaveChanges();

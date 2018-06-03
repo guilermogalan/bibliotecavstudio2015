@@ -18,7 +18,7 @@ namespace WebAppBiblioteca.models
         }//fin del constructor
 
         //extension de los metodos disponibles en la clase interface
-        public IEnumerable<CatLibros> CategoriaLibros => _appDbContext.CategoriasLibros;
+        public IEnumerable<CatLibros> CategoriaLibros => _appDbContext.CategoriaLibros;
     }
 }
 
