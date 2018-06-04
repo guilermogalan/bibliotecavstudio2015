@@ -13,6 +13,9 @@ namespace WebAppBiblioteca.models
 
         public DbSet<CatLibros> CategoriaLibros { get; set; }
         public DbSet<Libros> Libros { get; set; }
-        
+
+        public DbSet<usuarios.NivelesUsuario> NivUsuarios { get; set; }
+        public DbSet<usuarios.usuarios> Usuarios { get; set; }
+
     }
 }

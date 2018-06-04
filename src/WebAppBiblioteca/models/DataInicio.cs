@@ -9,7 +9,6 @@ namespace WebAppBiblioteca.models
 {
     public static class DataInicio
     {
-
         public static void AgregarData(IApplicationBuilder ab)
         {
             AppDbContext contexto = ab.ApplicationServices.GetRequiredService<AppDbContext>();

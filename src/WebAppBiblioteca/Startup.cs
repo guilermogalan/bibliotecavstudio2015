@@ -10,7 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration; //extension que se utiliza con IConfigurationRoot
 using Microsoft.EntityFrameworkCore; //extension para conexion con SQLServer
-
+using WebAppBiblioteca.models.usuarios;
 namespace WebAppBiblioteca
 {
     public class Startup
@@ -39,6 +39,9 @@ namespace WebAppBiblioteca
             //services.AddTransient<ICatLibrosRepositorio, MockCatLibrosRepositorio>();
             services.AddTransient<ICatLibrosRepositorio, CatLibrosRepositorio>();
             services.AddTransient<ILibrosRepositorio, LibrosRepositorio>();
+            //clase usuarios
+            services.AddTransient<INivelesUsuariosRepositorio, NivelesUsuariosRepositorio>();
+            services.AddTransient<IUsuariosRepositorio, UsuariosRepositorio>();
             
             //agrega soporte MVC a mi proyecto
             services.AddMvc();
@@ -53,6 +56,7 @@ namespace WebAppBiblioteca
             app.UseMvcWithDefaultRoute();
             app.UseDeveloperExceptionPage();
             DataInicio.AgregarData(app);
+            Datos.AgregarData(app);
         }
     }
 }

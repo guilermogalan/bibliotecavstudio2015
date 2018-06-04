@@ -1,0 +1,14 @@
+﻿
+@model ListaLibrosViewModel
+@ViewBag.CategoriaActual
+<h1>@Model.CategoriaLibros</h1>
+@foreach (var libros in Model.Libros)
+{
+    <div class="col-sm-4 col-lg-4 col-md-4">
+        <div class="caption">
+            <h3 class="pull-right">@libros.PreCostoLibro.ToString("c")</h3>
+            <h3><a>@libros.CodigoLibro</a></h3>
+            <h3><a>@libros.NombreLibro</a></h3>
+        </div>
+    </div>
+}

@@ -1,0 +1,6 @@
+﻿@model ListaUsuariosViewModel
+
+@foreach (var usuarios in Model.Usuarios)
+{
+    @Html.Partial("VerUsuarios", usuarios)
+}
